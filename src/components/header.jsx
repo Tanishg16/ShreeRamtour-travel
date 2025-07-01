@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 // import BuildIcon from "@mui/icons-material/Build";
+import logo from "../images/logoimage1.jpg"; // Placeholder for the new logo
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,6 +33,7 @@ const Header = () => {
       <div className="container">
         {/* Navbar Brand */}
         <a className="navbar-brand" href="#">
+          <img src={logo} alt="SHREE RAM TOUR & TRAVEL Logo" className="navbar-logo" />
           SHREE RAM TOUR & TRAVEL
         </a>
 
@@ -55,6 +57,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
-
