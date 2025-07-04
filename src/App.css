@@ -25,8 +25,11 @@
 
 .navbar-brand {
   color: #ffcc00;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: bold;
+   background: linear-gradient(to right, hsl(103, 36%, 81%), #55c72b); /* Example gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-decoration: none;
   display: flex; /* Align logo and text */
   align-items: center;
@@ -92,7 +95,7 @@
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 80px; /* Adjust position for larger logo */
+    top: 80px;
     right: 20px;
     background: #222;
     width: 200px;
@@ -164,11 +167,9 @@
   text-align: center;
   padding: 2rem;
 }
-
 .outerContent {
 color: white;
 font-size: 28px;
-
 }
 
 .innerContent {
@@ -176,13 +177,6 @@ font-size: 28px;
   margin-top: 10px;
   font-size: 24px;
 
-}
-@media (max-width: 100px) {
-  .middle-box {
-    height: 200px; 
-    background-size: cover;
-    background-position: center;
-  }
 }
 .input-row {
   display: flex;
@@ -234,11 +228,56 @@ font-size: 28px;
 .submit-button:hover {
   background-color: #0056b3;
 }
-
-
 .empty {
   color: transparent; /* Hide default time (if any) until selected */
 }
+@media (max-width: 768px) {
+  .middle-box {
+    /* background-size: contain; */
+    /* background-position: top center; */
+    height: auto;
+    padding: 3rem 1rem;
+    flex-direction: column;
+  }
+
+  .outerContent {
+    font-size: 22px;
+  }
+
+  .innerContent {
+    font-size: 18px;
+    margin-top: 8px;
+  }
+
+  .input-row {
+    flex-direction: row;
+    gap: 15px;
+    align-items: stretch;
+    padding: 0 10px;
+  }
+  .text-input,
+  .date-input,
+  .car-input,
+  .contact-input,
+  .time-input {
+    width: 50%;
+    font-size: 14px;
+  }
+
+  .time-wrapper {
+    width: 100%;
+  }
+
+  .submit-button {
+    width: 30%;
+    font-size: 15px;
+    margin-top: 25px;
+  }
+  .custom-placeholder{
+    width: 60%;
+  }
+}
+
 .service-container {
   text-align: center;
   padding: 40px 20px;
@@ -584,6 +623,48 @@ font-size: 28px;
   font-weight: 600;
   color: #222;
 }
+@media (max-width: 768px) {
+  .whyus-container {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .whyus-left {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .whyus-title {
+    font-size: 24px;
+  }
+
+  .whyus-features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .whyus-card {
+    flex-direction: row;
+    padding: 12px;
+  }
+
+  .whyus-icon {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  .whyus-text {
+    font-size: 14px;
+  }
+
+  .whyus-button {
+    width: 30%;
+    font-size: 10px;
+    padding: 10px;
+  }
+}
+
 .footer-container {
   background-color: orange;
   display: flex;
@@ -601,6 +682,7 @@ font-size: 28px;
 }
 .footer-para {
   margin-top: 30px;
+  margin-bottom: 10px;
    font-family: Arial, sans-serif;
 }
 .footer-button {
@@ -616,10 +698,10 @@ font-size: 28px;
 }
 
 .footer-links {
-  /* list-style: none; */
+  list-style: none;
   padding: 0;
   margin: 0;
-  margin-left: 10px
+  margin-left: 5px;
 }
 
 .footer-links li {
@@ -631,6 +713,71 @@ font-size: 28px;
   color: white;
   transition: color 0.3s ease;
 }
+.footer-email  a{
+  color: white;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+}
+.footer-socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.footer-socials a {
+  color: white;
+}
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    height:100%;
+    width: 100%;
+    padding: 40px 20px;
+    text-align: left;
+    align-items: left;
+  }
+
+  .footer-left {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .footer-features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: left;
+    margin-left: 9px;
+  }
+
+  .footer-features h2 {
+    margin-bottom: 5px;
+    font-size: 20px;
+  }
+
+  .footer-links {
+    margin-left: 25px;
+    margin-bottom: 20px;
+  }
+
+  .footer-links li {
+    margin-bottom: 8px;
+    justify-content: left;
+  }
+
+  .footer-button {
+    width: 30%;
+    padding: 12px;
+    font-size: 10px;
+    margin-top: 20px;
+  }
+
+  .footer-para {
+    font-size: 14px;
+    justify-content: left;
+  }
+}
+
 .contact-button {
   position: fixed;
   bottom: 20px;

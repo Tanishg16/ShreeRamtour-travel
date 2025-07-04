@@ -13,14 +13,14 @@ const Middletittle = () => {
 
     // Construct a detailed message with all the collected data
     const message =
-      `Hello, I'd like to make an inquiry:Name: ${name}, Selected Date: ${selectedDate},Contact: ${contact},Time: ${currentTime}Car Type: ${CarType}Thank you!
+      `Hello, I'd like to make an inquiry :Name: ${name}, Selected Date: ${selectedDate},Contact: ${contact},Time: ${currentTime}Car Type: ${CarType}  Thank you!
     `.trim(); // .trim() removes leading/trailing whitespace
 
     // Encode the entire mess    console.log(
     const encodedMessage = encodeURIComponent(message);
 
     // Construct the WhatsApp URL with the encoded message
-    const url = `https://wa.me/+918966966179?text=${encodedMessage}`;
+    const url = `https://wa.me/+919301277735?text=${encodedMessage}`;
 
     // Open the WhatsApp chat in a new tab
     window.open(url, "_blank");
@@ -80,7 +80,6 @@ const Middletittle = () => {
             {!currentTime && <span className="custom-placeholder">Time</span>}
           </div>
           <select
-            id="fruit"
             value={CarType}
             onChange={(e) => setCarType(e.target.value)}
             className="car-input"

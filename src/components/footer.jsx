@@ -1,4 +1,6 @@
 import React from "react";
+import { FaFacebook, FaInstagram, FaMapMarkerAlt  } from "react-icons/fa";
+
 const Footer = () => {
 return (
 <div className="footer-container">
@@ -23,8 +25,26 @@ return (
         <h4 className="footer-para">Phone :</h4>
         <h5>+91 9301277735</h5>
         <h4 className="footer-para">Email :</h4>
-        <h5>Support@shreeramtourtravel.com <br/>infotanish.g930@gmail.com </h5>
+        <h5 className="footer-email">
+          <a href="mailto:Support@shreeramtourtravel.com">Support@shreeramtourtravel.com</a><br />
+          <a href="mailto:tanish.g930@gmail.com">infotanish.g930@gmail.com</a>
+            <div className="footer-socials">
+    <a href="https://facebook.com/YourPageName" target="_blank" rel="noopener noreferrer">
+      <FaFacebook size={24} />
+    </a>
+    <a href="https://www.instagram.com/ram.travels1847?igsh=MWVsczBsdDBzc2V3NQ==" target="_blank" rel="noopener noreferrer">
+      <FaInstagram size={24} />
+    </a>
+  </div>
+     </h5>
         <h4 className="footer-para">Address</h4>
+        <a
+  href="https://www.google.com/maps/place/Dwarkapuri,+Indore,+Madhya+Pradesh/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <FaMapMarkerAlt size={24} color="white" />
+</a>
         <h5>932 Dwarkapuri Fothi Kothi Road City Indore</h5>
     </div>
 </div>
